@@ -9,13 +9,13 @@ import os
 import ssl
 import time
 import threading
-import prometheus_metrics
-from BaseHTTPServer import BaseHTTPRequestHandler
-from BaseHTTPServer import HTTPServer
-from SocketServer import ThreadingMixIn
+import hpilo_exporter.prometheus_metrics as prometheus_metrics
+from http.server import BaseHTTPRequestHandler
+from http.server import HTTPServer
+from socketserver import ThreadingMixIn
 from prometheus_client import generate_latest, Summary
-from urlparse import parse_qs
-from urlparse import urlparse
+from urllib.parse import parse_qs
+from urllib.parse import urlparse
 import concurrent.futures as futures
 
 def print_err(*args, **kwargs):

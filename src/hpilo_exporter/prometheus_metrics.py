@@ -16,6 +16,7 @@ hpilo_processor_gauge = Gauge('hpilo_processor', 'HP iLO processor status', ["pr
 hpilo_network_gauge = Gauge('hpilo_network', 'HP iLO network status', ["product_name", "server_name"])
 hpilo_temperature_gauge = Gauge('hpilo_temperature', 'HP iLO temperature status', ["product_name", "server_name"])
 hpilo_firmware_version = Gauge('hpilo_firmware_version', 'HP iLO firmware version', ["product_name", "server_name"])
+hpilo_present_power_reading = Gauge('hpilo_present_power_reading', 'HP iLO present power reading', ["product_name", "server_name"])
 
 gauges = {
     'hpilo_vrm_gauge': hpilo_vrm_gauge,
@@ -30,4 +31,5 @@ gauges = {
     'hpilo_network_gauge': hpilo_network_gauge,
     'hpilo_temperature_gauge': hpilo_temperature_gauge,
     'hpilo_firmware_version': hpilo_firmware_version,
+    'hpilo_present_power_reading': hpilo_present_power_reading,
 }
